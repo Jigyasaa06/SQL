@@ -1,0 +1,56 @@
+select * from facultydetails;
+
+1.Write a query to fetches and displays all the faculties details who don’t have an email id.
+
+1-select * from facultydetails where faculty_email=null;
+
+
+
+select * from facultydetails;
+
+2.Write a query to display the id, name, track and location of all Faculties who’s Experience are greater than 4 years.
+
+2-
+select faculty_id,faculty_name,faculty_track,faculty_qualification from facultydetails where faculty_experience>4;
+
+
+
+select * from moduledetails;
+
+
+3.Select all the modules whose duration> 150.
+3-select * from moduledetails where module_duration>150;
+
+
+
+4.Select all the FacultyId, Faculty name whose qualification is not ‘Bachelor of Technology’. 
+4-select faculty_name, faculty_id from facultydetails where faculty_qualification<> "bachelor of technology";
+
+
+
+5.Select all the modules whose duration is between 100 and 200.
+5-select * from moduledetails where module_duration between 100 and 200;
+
+6.Display the FacultyId, Facultyname with first name starting with ‘A'.
+6-select faculty_name,faculty_id from facultydetails where faculty_name like 'A%';
+
+
+
+7.Display the FacultyId, Facultyname whose first name contains a character ‘M’
+7.select faculty_id,faculty_name from facultydetails where faculty_name like '% M %';
+
+
+8.Display the names of all the modules where the module name is does not exists. 
+8-select module_name from moduledetails where module_name=null;
+
+
+select * from moduledetails;
+
+
+9.Write a query to display the module name and module durationof the entire modules.
+9-select module_name, module_duration from moduledetails;
+
+
+
+10.Write a query to display list of all the module id and module nameswith first letter capital of module name from ModuleDetails table.
+10-select *  from moduledetails where module_name regexp binary('^[A-Z]') ;
